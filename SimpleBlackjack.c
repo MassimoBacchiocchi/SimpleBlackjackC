@@ -14,7 +14,7 @@ int main() {
 		int new;
 		int newcard;
 		int draw;
-		lower = 1;
+		lower = 2;
 		upper = 11;
 		num = 0;
 		play = 0;
@@ -65,6 +65,8 @@ int main() {
 			printf("%d", play);
 			printf("\n Would you like to hit again? Enter 1 for hit or 0 for stand: ", draw);
 			scanf(" %d", &draw);
+
+			
 		}
 			
 		printf("\n Player has a total of: ");
@@ -104,5 +106,12 @@ int main() {
 			printf("\n Push");
 			printf("\n Draw!");
 		}
+
+		//New line
+		printf("\n");
+
+		//keeps window open
+		system("pause");
+		return 0;
 
 }
