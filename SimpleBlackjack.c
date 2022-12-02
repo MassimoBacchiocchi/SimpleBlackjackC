@@ -65,8 +65,15 @@ int main() {
 				play = play + newcard;
 				printf("\n Player has a total of: ");
 				printf("%d", play);
-				printf("\n Would you like to hit again? Enter 1 for hit or 0 for stand: ", draw);
-				scanf(" %d", &draw);
+				if (play >= 21 ) {
+					draw = 0;
+				}
+				else {
+					printf("\n Would you like to hit again? Enter 1 for hit or 0 for stand: ", draw);
+					scanf(" %d", &draw);
+				}
+
+
 
 				
 			}
