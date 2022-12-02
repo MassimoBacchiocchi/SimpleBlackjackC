@@ -63,6 +63,13 @@ int main() {
 				printf("\n Player drew: ");
 				printf("%d", newcard);
 				play = play + newcard;
+
+				//makes aces work
+				
+				if (((card1 == 11) || (card2 == 11)) && (play > 21)) {
+					play = play - 10;
+				} 
+
 				printf("\n Player has a total of: ");
 				printf("%d", play);
 				if (play >= 21 ) {
