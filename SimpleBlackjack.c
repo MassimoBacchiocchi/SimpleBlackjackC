@@ -71,7 +71,7 @@ int main() {
 				//makes aces work
 
 				if (((card1 == 11) || (card2 == 11)) && (play > 21)) {
-					play = play - 10;
+					play -= 10;
 				} 
 
 				printf("\n Player has a total of: ");
