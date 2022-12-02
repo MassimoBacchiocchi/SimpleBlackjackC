@@ -15,6 +15,8 @@ int main() {
 		int newcard;
 		int draw;
 		int again;
+		int playwin;
+		int comwin;
 		lower = 2;
 		upper = 11;
 		num = 0;
@@ -26,6 +28,8 @@ int main() {
 		newcard = 0;
 		draw = 1;
 		again = 1;
+		playwin = 0;
+		comwin = 0;
 		srand(time(0));
 		
 		while (again == 1){
@@ -65,7 +69,7 @@ int main() {
 				play = play + newcard;
 
 				//makes aces work
-				
+
 				if (((card1 == 11) || (card2 == 11)) && (play > 21)) {
 					play = play - 10;
 				} 
@@ -105,23 +109,39 @@ int main() {
 			if(play > 21) {
 				printf("\n Player has bust");
 				printf("\n Computer Wins!");
+				comwin++;
 			}
 			//computer bust
 			else if(com > 21) {
 				printf("\n Computer has bust");
 				printf("\n Player Wins!");
+				playwin++;
 			}
 			//determine winner
 			else if(play > com) {
 				printf("\n Player Wins!");
+				playwin++;
 			}
 			else if (play < com) {
 				printf("\n Computer Wins!");
+				comwin++;
 			}
 			else {
 				printf("\n Push");
 				printf("\n Draw!");
 			}
+
+			printf("\n----------------------------------------------------------------------------------");
+
+			printf("\n Player has won: ");
+			printf("%d", playwin);
+			printf(" time(s)");
+
+			printf("\n Computer has won: ");
+			printf("%d", comwin);
+			printf(" time(s)");
+
+			printf("\n----------------------------------------------------------------------------------");
 
 
 
